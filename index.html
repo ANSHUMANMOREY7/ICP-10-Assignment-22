@@ -11,6 +11,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh ;
+        
     }
     .box{
         border: 2px solid black;
@@ -18,6 +19,7 @@
         width: fit-content;
         border-radius: 10px;
         padding: 20px;
+        background-color: white;
     }
     .light{
         display: block;
@@ -38,10 +40,13 @@
         width: 120px;
         font-size: 15px;
     }
+    .body{
+        background-color: gold;
+    }
 </style>
-<body>
+<body id="body" class="body">
     <div class="container">
-        <div class="box">
+        <div class="box" id="box">
             <img src="light.png" alt="day" class="light" id="image">
             <button class="button" onclick="button()" id="button"> LIGHT</button>
         </div>
@@ -49,6 +54,8 @@
  <script>
     const Elementlight = document.getElementById('image')
     const ElementButton = document.getElementById('button')
+    const elementBody = document.getElementById('body')
+    const ElementBox =document.getElementById('box')
   function button() {
     
     if (Elementlight.src.includes('light.png') )
@@ -56,10 +63,13 @@
 
         Elementlight.src=('dark.png')
         ElementButton.innerText=('DARK')
+        elementBody.style.backgroundColor=('black')
     }
     else{
         Elementlight.src=('light.png')
         ElementButton.innerText=('LIGHT')
+        elementBody.style.backgroundColor=('gold')
+        
     }
   }
  </script>
