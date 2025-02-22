@@ -49,7 +49,7 @@
     <div class="container">
         <div class="box" id="box">
             <img src="light.png" alt="day" class="light" id="image">
-            <button class="button" onclick="button()" id="button"> LIGHT</button>
+            <button class="button" onclick="button()" id="button"> DARK</button>
         </div>
     </div>
  <script>
@@ -64,14 +64,15 @@
     {
 
         Elementlight.src=('dark.png')
-        ElementButton.innerText=('DARK')
+        ElementButton.innerText=('LIGHT')
         elementBody.style.backgroundColor=('black')
         ElementButton.style.backgroundColor=('black')
         ElementButton.style.color=('white')
+        
     }
     else{
         Elementlight.src=('light.png')
-        ElementButton.innerText=('LIGHT')
+        ElementButton.innerText=('DARK')
         elementBody.style.backgroundColor=('gold')
         ElementButton.style.backgroundColor=('gold')
         ElementButton.style.color=('black')
