@@ -43,20 +43,23 @@
     <div class="container">
         <div class="box">
             <img src="light.png" alt="day" class="light" id="image">
-            <button class="button" onclick="button()"> LIGHT</button>
+            <button class="button" onclick="button()" id="button"> LIGHT</button>
         </div>
     </div>
  <script>
     const Elementlight = document.getElementById('image')
+    const ElementButton = document.getElementById('button')
   function button() {
     
     if (Elementlight.src.includes('light.png') )
     {
 
         Elementlight.src=('dark.png')
+        ElementButton.innerText=('DARK')
     }
     else{
         Elementlight.src=('light.png')
+        ElementButton.innerText=('LIGHT')
     }
   }
  </script>
