@@ -42,12 +42,23 @@
 <body>
     <div class="container">
         <div class="box">
-            <img src="light.png" alt="day" class="light">
-            <button class="button"> LIGHT</button>
+            <img src="light.png" alt="day" class="light" id="image">
+            <button class="button" onclick="button()"> LIGHT</button>
         </div>
     </div>
  <script>
+    const Elementlight = document.getElementById('image')
+  function button() {
     
+    if (Elementlight.src.includes('light.png') )
+    {
+
+        Elementlight.src=('dark.png')
+    }
+    else{
+        Elementlight.src=('light.png')
+    }
+  }
  </script>
 </body>
 </html>
