@@ -39,6 +39,7 @@
         margin-bottom: 10px;
         width: 120px;
         font-size: 15px;
+        background-color: gold;
     }
     .body{
         background-color: gold;
@@ -56,6 +57,7 @@
     const ElementButton = document.getElementById('button')
     const elementBody = document.getElementById('body')
     const ElementBox =document.getElementById('box')
+    
   function button() {
     
     if (Elementlight.src.includes('light.png') )
@@ -64,11 +66,15 @@
         Elementlight.src=('dark.png')
         ElementButton.innerText=('DARK')
         elementBody.style.backgroundColor=('black')
+        ElementButton.style.backgroundColor=('black')
+        ElementButton.style.color=('white')
     }
     else{
         Elementlight.src=('light.png')
         ElementButton.innerText=('LIGHT')
         elementBody.style.backgroundColor=('gold')
+        ElementButton.style.backgroundColor=('gold')
+        ElementButton.style.color=('black')
         
     }
   }
